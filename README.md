@@ -13,22 +13,15 @@ My linux dotFiles config
 
 
 ### Install and configure Fish shell
+install essential packages and set fish as default shell for user
 
-install essential packages
 ```bash
 sudo apt-get install fish curl git 
-```
-
-set fish as default shell for user
-```bash
 sudo usermod -s /usr/bin/fish <username>
 ```
-install Tide theme
-```bash
-fisher install Ilancosman/tideôv61
-tide configure
-```
+
 ### My aliases
+
 ```bash
-alias —save cls=clearl
+alias —save cls=clear
 ```
