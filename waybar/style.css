@@ -1,0 +1,90 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
+    font-weight: bold;
+    font-size: 14px;   /* ↓ taille de police plus compacte */
+}
+
+window#waybar {
+    border-radius: 12px;
+    background: #120009;
+    color: #ffb7e5;
+}
+
+tooltip {
+    background: #200014;
+    border-radius: 10px;
+    border: 1px solid #ff2077;
+    font-size: 13px;  /* plus petit aussi */
+    padding: 4px 10px;
+}
+
+tooltip label {
+    color: #ffb7e5;
+}
+
+#workspaces {
+    border-radius: 12px 18px 18px 12px;
+    margin: 0;
+    background-color: rgba(255, 32, 64, 0.07);
+    padding: 0 2px;  /* ↓ moins d’espace horizontal */
+}
+
+#workspaces button {
+    min-width: 20px;  /* ↓ plus petit */
+    border-radius: 14px;
+    margin: 4px 0;
+    color: #ffb7e5;
+    padding: 2px 4px;  /* ↓ padding réduit */
+    font-size: 13px;
+}
+
+#workspaces button:not(:last-child) {
+    margin-right: 2px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 32, 64, 0.15);
+}
+
+#workspaces button.active,
+#workspaces button.active:hover {
+    background: #ff2040;
+    color: #120009;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#backlight,
+#custom-temperature {
+    padding: 0 8px;           /* ↓ padding horizontal réduit */
+    background-color: rgba(255, 32, 64, 0.08);
+
+    font-size: 14px;          /* même taille que globale */
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#network {
+    border-radius: 18px 0 0 18px;
+    padding-left: 10px;
+}
+
+#battery.warning {
+    color: #ff0a6c;
+}
+
+#battery.critical, #temperature.critical {
+    color: #ff2040;
+}
+
+#clock {
+    padding-right: 4px;
+    border-radius: 0 6px 6px 0;
+}
