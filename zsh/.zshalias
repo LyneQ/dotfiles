@@ -1,0 +1,7 @@
+alias zshconfig="nvim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias cls="clear"
+alias ls="lsd -lah"
+alias home="cd ~"
+alias dev="cd /mnt/Mint/Projects"
