@@ -1,20 +1,20 @@
 * {
     font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
-    font-weight: bold;
-    font-size: 14px;   /* ↓ taille de police plus compacte */
+    font-weight: normal;
+    font-size: 14px;
 }
 
 window#waybar {
     border-radius: 12px;
     background: #120009;
-    color: #ffb7e5;
+    color: #f67ac9;
 }
 
 tooltip {
     background: #200014;
     border-radius: 10px;
     border: 1px solid #ff2077;
-    font-size: 13px;  /* plus petit aussi */
+    font-size: 13px;
     padding: 4px 10px;
 }
 
@@ -26,16 +26,15 @@ tooltip label {
     border-radius: 12px 18px 18px 12px;
     margin: 0;
     background-color: rgba(255, 32, 64, 0.07);
-    padding: 0 2px;  /* ↓ moins d’espace horizontal */
+    padding: 0 2px;
 }
 
 #workspaces button {
-    min-width: 20px;  /* ↓ plus petit */
+    min-width: 20px;
     border-radius: 14px;
     margin: 4px 0;
-    color: #ffb7e5;
-    padding: 2px 4px;  /* ↓ padding réduit */
-    font-size: 13px;
+    color: #f67ac9;
+    padding: 2px 4px;
 }
 
 #workspaces button:not(:last-child) {
@@ -61,10 +60,8 @@ tooltip label {
 #workspaces,
 #backlight,
 #custom-temperature {
-    padding: 0 8px;           /* ↓ padding horizontal réduit */
+    padding: 0 8px;
     background-color: rgba(255, 32, 64, 0.08);
-
-    font-size: 14px;          /* même taille que globale */
 }
 
 #tray {
