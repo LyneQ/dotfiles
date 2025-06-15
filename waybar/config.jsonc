@@ -25,10 +25,11 @@
 			"1": "",    // Firefox
 			"2": "",    // Discord,
 			"3": "",    // Code,
+			"4": "",	 // Spotify
 			"default": ""
 		},
 		"persistent-workspaces": {
-			"*": [1, 2, 3]
+			"*": [1, 2, 3, 4]
 		}
 	},
 
