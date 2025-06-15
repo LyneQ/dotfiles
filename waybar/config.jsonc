@@ -23,7 +23,7 @@
 		"format": "{icon}",
 		"format-icons": {
 			"1": "",    // Firefox
-			"2": "",    // Terminal,
+			"2": "",    // Discord,
 			"3": "",    // Code,
 			"default": ""
 		},

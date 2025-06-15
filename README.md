@@ -42,6 +42,7 @@ dotfiles/
    ln -s ~/dotfiles/waybar ~/.config/waybar
    ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
    ln -s ~/dotfiles/zsh/.zshalias ~/.zshalias
+   ln -s ~/dotfiles/wofi ~/.config/wofi
    ```
 
 ---
