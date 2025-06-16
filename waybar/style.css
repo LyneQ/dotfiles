@@ -47,8 +47,6 @@ tooltip label {
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    /*background: #ff2040;*/
-    /*color: #120009;*/
     color: #ff2040;
 }
 
@@ -71,7 +69,7 @@ tooltip label {
 
 #network {
     border-radius: 18px 0 0 18px;
-    padding-left: 10px;
+    padding-left: 14px;
 }
 
 #battery.warning {
@@ -83,6 +81,6 @@ tooltip label {
 }
 
 #clock {
-    padding-right: 4px;
-    border-radius: 0 6px 6px 0;
+    padding-right: 14px;
+    border-radius: 0 12px 12px 0;
 }
