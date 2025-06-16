@@ -47,8 +47,9 @@ tooltip label {
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    background: #ff2040;
-    color: #120009;
+    /*background: #ff2040;*/
+    /*color: #120009;*/
+    color: #ff2040;
 }
 
 #clock,
