@@ -14,7 +14,9 @@
 		"bluetooth",
 		"custom/temperature",
 		"pulseaudio",
-		"clock"
+		"clock",
+		"custom/reboot",
+		"custom/poweroff"
 	],
 	"hyprland/window": {
 		"format": "{}"
@@ -117,5 +119,30 @@
 		"on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%+",
 		"on-scroll-down": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%-",
 		"scroll-step": 5
+	},
+	"custom/poweroff": {
+		"format": "󰐥", // icône power Font Nerd
+		"tooltip": "Éteindre le système",
+		"exec": "echo '󰐥'",
+		"on-click": "~/.config/waybar/scripts/poweroff.sh",
+		"interval": 99999,
+		"style": {
+			"color": "#ff2040",
+			"font-family": "JetBrainsMono Nerd Font",
+			"padding": "0 8px"
+		}
+	},
+
+	"custom/reboot": {
+		"format": "󰜉", // icône reboot Font Nerd
+		"tooltip": "Redémarrer le système",
+		"exec": "echo '󰜉'",
+		"on-click": "~/.config/waybar/scripts/reboot.sh",
+		"interval": 99999,
+		"style": {
+			"color": "#f67ac9",
+			"font-family": "JetBrainsMono Nerd Font",
+			"padding": "0 8px"
+		}
 	}
 }

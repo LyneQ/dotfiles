@@ -58,7 +58,9 @@ tooltip label {
 #temperature,
 #workspaces,
 #backlight,
-#custom-temperature {
+#custom-temperature,
+#custom-reboot,
+#custom-poweroff {
     padding: 0 8px;
     background-color: rgba(255, 32, 64, 0.08);
 }
@@ -82,5 +84,15 @@ tooltip label {
 
 #clock {
     padding-right: 14px;
+}
+
+#custom-reboot {
+    color: #f67ac9;
+    padding: 0 8px;
+}
+
+#custom-poweroff {
+    color: #ff2040;
+    padding: 0 8px;
     border-radius: 0 12px 12px 0;
 }
