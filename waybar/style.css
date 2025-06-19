@@ -82,17 +82,13 @@ tooltip label {
     color: #ff2040;
 }
 
-#clock {
-    padding-right: 14px;
-}
-
 #custom-reboot {
     color: #f67ac9;
     padding: 0 8px;
 }
 
 #custom-poweroff {
-    color: #f67ac9;;
-    padding: 0 8px;
+    padding-right: 14px;
+    color: #f67ac9;
     border-radius: 0 12px 12px 0;
 }
