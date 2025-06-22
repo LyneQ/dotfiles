@@ -1,0 +1,42 @@
+format = """
+[$username$hostname](bold #00ffe7) $directory$git_branch$git_status$nodejs
+[➤](bold #fcee09) """
+
+add_newline = false
+
+[username]
+style_user = "bold #00ffe7"
+style_root = "bold red"
+format = "[$user](bold #00ffe7)"
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "@[$hostname](bold #ff005f) "
+disabled = false
+
+[directory]
+style = "bold #fcee09"
+read_only_style = "bold #ff005f"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = " "
+
+[git_branch]
+symbol = " "
+style = "bold #00ffe7"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "#ff005f"
+format = "[($all_status$ahead_behind)]($style) "
+
+[nodejs]
+symbol = " "
+style = "bold #46f9ff"
+format = "[$symbol($version )]($style)"
+
+[character]
+success_symbol = "[➤](bold #fcee09)"
+error_symbol = "[✖](bold #ff005f)"
+vicmd_symbol = "[❮](bold #00ffe7)"

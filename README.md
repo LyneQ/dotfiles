@@ -43,6 +43,7 @@ dotfiles/
    ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
    ln -s ~/dotfiles/zsh/.zshalias ~/.zshalias
    ln -s ~/dotfiles/wofi ~/.config/wofi
+   ln -s ~/dotfiles/starship.toml  ~/.config/starship.toml
    ```
 
 ---

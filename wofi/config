@@ -1,9 +1,9 @@
 [config]
 allow_images=true
 width=500
+height=420
 show=drun
-prompt=Search
-height=400
+prompt=RUN
 always_parse_args=true
 show_all=true
 term=kitty
@@ -11,5 +11,3 @@ hide_scroll=true
 print_command=true
 insensitive=true
 columns=1
-
-# Same as the original source, no modifications made

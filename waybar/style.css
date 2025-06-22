@@ -6,26 +6,25 @@
 
 window#waybar {
     border-radius: 12px;
-    background: #120009;
-    color: #f67ac9;
+    background: #0d0d0d;
+    color: #00ffe7;
 }
 
 tooltip {
-    background: #200014;
+    background: #141414;
     border-radius: 10px;
-    border: 1px solid #ff2077;
+    border: 1px solid #fcee09;
     font-size: 13px;
     padding: 4px 10px;
 }
 
 tooltip label {
-    color: #ffb7e5;
+    color: #fcee09;
 }
 
 #workspaces {
     border-radius: 12px 18px 18px 12px;
-    margin: 0;
-    background-color: rgba(255, 32, 64, 0.07);
+    background-color: rgba(0, 255, 231, 0.05);
     padding: 0 2px;
 }
 
@@ -33,7 +32,7 @@ tooltip label {
     min-width: 20px;
     border-radius: 14px;
     margin: 4px 0;
-    color: #f67ac9;
+    color: #00ffe7;
     padding: 2px 4px;
 }
 
@@ -42,12 +41,12 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background: rgba(255, 32, 64, 0.15);
+    background: rgba(0, 255, 231, 0.15);
 }
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    color: #ff2040;
+    color: #fcee09;
 }
 
 #clock,
@@ -62,7 +61,7 @@ tooltip label {
 #custom-reboot,
 #custom-poweroff {
     padding: 0 8px;
-    background-color: rgba(255, 32, 64, 0.08);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 #tray {
@@ -75,20 +74,20 @@ tooltip label {
 }
 
 #battery.warning {
-    color: #ff0a6c;
+    color: #ff005f;
 }
 
 #battery.critical, #temperature.critical {
-    color: #ff2040;
+    color: #fcee09;
 }
 
 #custom-reboot {
-    color: #f67ac9;
+    color: #00ffe7;
     padding: 0 8px;
 }
 
 #custom-poweroff {
     padding-right: 14px;
-    color: #f67ac9;
+    color: #fcee09;
     border-radius: 0 12px 12px 0;
 }

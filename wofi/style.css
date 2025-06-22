@@ -10,43 +10,56 @@
 window {
     all: unset;
     padding: 0;
-    border-radius: 8px;
-    background-color: #120009;
-    box-shadow: 0 6px 32px 0 #120009b4;
+    border-radius: 10px;
+    background-color: rgba(13, 13, 13, 0.92);
+    box-shadow: 0 0 12px 2px rgba(252, 238, 9, 0.3);
 }
-#outer-box { padding: 14px 10px 14px 10px; }
-#scroll { padding: 0; margin: 0; border: 8px solid transparent; }
+
+#outer-box {
+    padding: 16px 12px;
+}
+
+#scroll {
+    padding: 0;
+    margin: 0;
+    border: 8px solid transparent;
+}
+
 #input {
     all: unset;
     margin-bottom: 15px;
     padding: 10px 20px;
     border-radius: 6px;
-    background-color: #240041;
-    color: #ff0e82;
+    background-color: #1a1a1a;
+    color: #00ffe7;
+    border: 1px solid #00ffe7;
+    box-shadow: inset 0 0 6px #00ffe733;
 }
+
 #entry {
     margin: 4px 0;
     padding: 8px 14px;
     border-radius: 6px;
-    background-color: rgba(255,32,64,0.08);
-    color: #ffb7e5;
+    background-color: rgba(0, 255, 231, 0.05);
+    color: #fcee09;
+    transition: background-color 0.15s ease-in-out;
 }
+
 #entry:selected {
-    background-color: #ff2040;
-    color: #120009;
+    background-color: #fcee09;
+    color: #0d0d0d;
     border-radius: 6px;
 }
 
-
 #entry:selected #text {
-    color: #120009;
+    color: #0d0d0d;
 }
 
 #text {
     margin-left: 6px;
-    color: #ffb7e5;
+    color: #00ffe7;
 }
 
 #entry arrow {
-    color: #c79bff;
+    color: #ff005f;
 }
