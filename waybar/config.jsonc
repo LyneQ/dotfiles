@@ -60,10 +60,10 @@
 		"format": "󰂯",
 		"format-disabled": "󰂲",
 		"format-connected": "󰂱 {num_connections}",
-		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-		"on-click": "bluetooth toggle"
+		"tooltip-format": "{controller_alias}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}",		
+		"on-click": "blueman-manager"
 	},
 	"custom/temperature": {
 		"format": " {}°C",
