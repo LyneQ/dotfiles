@@ -7,7 +7,8 @@
 window#waybar {
     /*border-radius: 12px;*/
     background: #0d0d0d;
-    color: #00ffe7;
+    /*color: #00ffe7;*/
+    color: rgb(211, 211, 211);
 }
 
 tooltip {
@@ -25,7 +26,7 @@ tooltip label {
 #workspaces {
     /*border-radius: 12px 18px 18px 12px;*/
     border-radius: 0 18px 18px 0;
-    background-color: rgba(0, 255, 231, 0.05);
+    /*background-color: rgba(0, 255, 231, 0.05);*/
     padding: 0 2px;
 }
 
@@ -33,7 +34,8 @@ tooltip label {
     min-width: 20px;
     border-radius: 14px;
     margin: 4px 0;
-    color: #00ffe7;
+    /*color: #00ffe7;*/
+    color: rgb(216, 216, 216);
     padding: 2px 4px;
 }
 
@@ -42,7 +44,9 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 255, 231, 0.15);
+    /*background: rgba(0, 255, 231, 0.15);*/
+    color: rgba(252, 238, 9, 0.68);
+    background: none;
 }
 
 #workspaces button.active,
@@ -62,11 +66,12 @@ tooltip label {
 #custom-reboot,
 #custom-poweroff {
     padding: 0 8px;
-    background-color: rgba(255, 255, 255, 0.03);
+    /*background-color: rgba(255, 255, 255, 0.03);*/
+    background-color: rgba(60, 60, 60, 0.19);
 }
 
 #pulseaudio.microphone {
-    color: #00ffe7;
+    /*color: #00ffe7;*/
     padding: 0 8px;
 }
 
@@ -93,12 +98,10 @@ tooltip label {
 }
 
 #custom-reboot {
-    color: #00ffe7;
     padding: 0 8px;
 }
 
 #custom-poweroff {
     padding-right: 14px;
-    color: #00ffe7;
     /*border-radius: 0 12px 12px 0;*/
 }
