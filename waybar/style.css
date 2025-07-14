@@ -47,6 +47,7 @@ tooltip label {
     /*background: rgba(0, 255, 231, 0.15);*/
     color: rgba(252, 238, 9, 0.68);
     background: none;
+    border: none;
 }
 
 #workspaces button.active,
