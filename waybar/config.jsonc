@@ -103,10 +103,10 @@
 		"tooltip-format": "{calendar}",
 		"calendar": {
 			"format": {
-				"months": "<span color='#fcee09'><b>{}</b></span>",
-				"days": "<span color='#00ffe7'><b>{}</b></span>",
-				"weekdays": "<span color='#ff005f'><b>{}</b></span>",
-				"today": "<span color='#fcee09'><b><u>{}</u></b></span>"
+				"months": "<span color='#8f6aaf'><b>{}</b></span>",
+				"days": "<span color='#e0e0e0'><b>{}</b></span>",
+				"weekdays": "<span color='#4d3d6a'><b>{}</b></span>",
+				"today": "<span color='#8f6aaf'><b><u>{}</u></b></span>"
 			}
 		}
 	},
@@ -139,7 +139,7 @@
 		"on-click": "~/.config/waybar/scripts/poweroff.sh",
 		"interval": 99999,
 		"style": {
-			"color": "#ff2040",
+			"color": "#8f6aaf",
 			"font-family": "JetBrainsMono Nerd Font",
 			"padding": "0 8px"
 		}
@@ -152,7 +152,7 @@
 		"on-click": "~/.config/waybar/scripts/reboot.sh",
 		"interval": 99999,
 		"style": {
-			"color": "#f67ac9",
+			"color": "#6a3d7b",
 			"font-family": "JetBrainsMono Nerd Font",
 			"padding": "0 8px"
 		}
