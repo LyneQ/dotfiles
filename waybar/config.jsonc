@@ -26,10 +26,10 @@
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",    // Firefox
-			"2": "",    // Discord,
-			"3": "",    // Code,
-			"4": "",	 // Spotify
+			"1": " ",    // Firefox
+			"2": " ",    // Discord,
+			"3": " ",    // Code,
+			"4": " ",	 // Spotify
 			"default": ""
 		},
 		"persistent-workspaces": {
@@ -43,16 +43,17 @@
 	},
 	"network": {
 		"format-icons": [
+			"󰤯",
 			"󰤟",
 			"󰤢",
-			"󰤥",
-			"󰤨"
+			"󰤥"
 		],
 		"format-wifi": "{icon}",
-		"format-ethernet": "",
-		"format-linked": "󰄡",
-		"format-disconnected": "",
-		"tooltip-format": "{essid} ({signalStrength}%) - {gwaddr}",
+		"format-ethernet": "󰈁",
+		"format-linked": "󰈁",
+		"format-disconnected": "󰤮",
+
+      "tooltip-format": "{essid} ({signalStrength}%) - {gwaddr}",
 		"tooltip-format-ethernet": "{ifname} - {gwaddr}",
 		"tooltip-format-disconnected": "Disconnected"
 	},
@@ -66,7 +67,7 @@
 		"on-click": "blueman-manager"
 	},
 	"custom/temperature": {
-		"format": " {}°C",
+		"format": "󱃃 {}°C",
 		"interval": 5,
 		"exec": "awk '{printf(\"%d\", $1/1000)}' /sys/class/hwmon/hwmon1/temp1_input"
 	},
@@ -82,7 +83,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-muted": "󰝟 0%",
+		"format-muted": "󰖁 0%",
 		"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
 		"on-click-right": "pavucontrol",
 		"on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SINK@ 5%+",
@@ -133,8 +134,8 @@
 		"scroll-step": 5
 	},
 	"custom/poweroff": {
-		"format": "󰐥", // icône power Font Nerd
-		"tooltip": "Éteindre le système",
+		"format": "⏻", // icône power Font Nerd
+		"tooltip-format": "Éteindre le système",
 		"exec": "echo '󰐥'",
 		"on-click": "~/.config/waybar/scripts/poweroff.sh",
 		"interval": 99999,
@@ -146,8 +147,8 @@
 	},
 
 	"custom/reboot": {
-		"format": "󰜉", // icône reboot Font Nerd
-		"tooltip": "Redémarrer le système",
+		"format": "󰑓", // icône reboot Font Nerd
+		"tooltip-format": "Redémarrer le système",
 		"exec": "echo '󰜉'",
 		"on-click": "~/.config/waybar/scripts/reboot.sh",
 		"interval": 99999,
