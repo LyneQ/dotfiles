@@ -29,7 +29,7 @@
 			"exec": "~/.config/waybar/scripts/distro_icon.sh",
 			"interval": 3600,
 			"tooltip": true,
-			"on-click": "exec wlogout"
+			"on-click": "exec wlogout -b 4"
 		},
 	"hyprland/workspaces": {
 		"format": "{icon}",

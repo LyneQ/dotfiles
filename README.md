@@ -48,12 +48,6 @@ dotfiles/
 
 ---
 
-## 🎨 Thèmes de couleurs
-
-Des thèmes de couleurs personnalisés sont disponibles pour Hyprland et Wofi. Consultez le fichier [color-schemes.md](color-schemes.md) pour voir les aperçus et les détails d'utilisation.
-
----
-
 ## 🙏 Crédits
 
 
