@@ -6,7 +6,7 @@
 
 window#waybar {
     /*border-radius: 12px;*/
-    background: transparent;
+    /*background: transparent;*/
     /*color: #00ffe7;*/
     color: #e0e0e0;
     background-color: rgba(4, 4, 4, 0.85);
@@ -68,9 +68,7 @@ tooltip label {
 #backlight,
 #tray,
 #custom-logo,
-#custom-temperature,
-#custom-reboot,
-#custom-poweroff {
+#custom-temperature {
     padding: 0 8px;
     /*background-color: rgba(26, 26, 26, 0.8);*/
     /*border-radius: 12px;*/
@@ -124,15 +122,6 @@ tooltip label {
     color: #8f6aaf;
 }
 
-#custom-poweroff {
-    /*border-radius: 0 12px 12px 0;*/
-    padding: 0 14px;
-}
-
 #bluetooth {
- /*    padding: 0 14px; */
-}
-
-#custom-reboot {
  /*    padding: 0 14px; */
 }

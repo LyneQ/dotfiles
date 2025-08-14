@@ -28,7 +28,8 @@
 			"return-type": "json",
 			"exec": "~/.config/waybar/scripts/distro_icon.sh",
 			"interval": 3600,
-			"tooltip": true
+			"tooltip": true,
+			"on-click": "exec wlogout"
 		},
 	"hyprland/workspaces": {
 		"format": "{icon}",
@@ -139,30 +140,5 @@
 		"on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%+",
 		"on-scroll-down": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%-",
 		"scroll-step": 5
-	},
-	"custom/poweroff": {
-		"format": "⏻", // icône power Font Nerd
-		"tooltip-format": "Éteindre le système",
-		"exec": "echo '󰐥'",
-		"on-click": "~/.config/waybar/scripts/poweroff.sh",
-		"interval": 99999,
-		"style": {
-			"color": "#8f6aaf",
-			"font-family": "JetBrainsMono Nerd Font",
-			"padding": "0 8px"
-		}
-	},
-
-	"custom/reboot": {
-		"format": "󰑓", // icône reboot Font Nerd
-		"tooltip-format": "Redémarrer le système",
-		"exec": "echo '󰜉'",
-		"on-click": "~/.config/waybar/scripts/reboot.sh",
-		"interval": 99999,
-		"style": {
-			"color": "#6a3d7b",
-			"font-family": "JetBrainsMono Nerd Font",
-			"padding": "0 8px"
-		}
 	}
 }
