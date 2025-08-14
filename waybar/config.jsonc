@@ -4,6 +4,7 @@
 	"margin": "0",
 	"mod": "dock",
 	"modules-left": [
+        "custom/logo",
 		"hyprland/workspaces"
 	],
 	//"modules-center": [
@@ -23,6 +24,12 @@
 	"hyprland/window": {
 		"format": "{}"
 	},
+ 	"custom/logo": {
+			"return-type": "json",
+			"exec": "~/.config/waybar/scripts/distro_icon.sh",
+			"interval": 3600,
+			"tooltip": true
+		},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
