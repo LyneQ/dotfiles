@@ -5,9 +5,6 @@
 }
 
 window#waybar {
-    /*border-radius: 12px;*/
-    /*background: transparent;*/
-    /*color: #00ffe7;*/
     color: #e0e0e0;
     background-color: rgba(4, 4, 4, 0.85);
 }
@@ -25,9 +22,6 @@ tooltip label {
 }
 
 #workspaces {
-    /*border-radius: 12px 18px 18px 12px;*/
-    /*border-radius: 0 18px 18px 0;*/
-    /*background-color: rgba(0, 255, 231, 0.05);*/
     padding: 0 2px;
 }
 
@@ -47,14 +41,14 @@ tooltip label {
 
 #workspaces button:hover {
     /*background: rgba(0, 255, 231, 0.15);*/
-    color: rgba(143, 106, 175, 0.8);
+    color: #46ebeb;
     background: none;
     border: none;
 }
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    color: #8f6aaf;
+    color: #f50a1c;
 }
 
 #clock,
@@ -70,9 +64,6 @@ tooltip label {
 #custom-logo,
 #custom-temperature {
     padding: 0 8px;
-    /*background-color: rgba(26, 26, 26, 0.8);*/
-    /*border-radius: 12px;*/
-    /*margin: 4px 4px;*/
     margin: 0;
 }
 
@@ -81,7 +72,7 @@ tooltip label {
 }
 
 #pulseaudio.microphone.muted {
-    color: #4d3d6a;
+    color: #f50a1c;
 }
 
 
@@ -112,16 +103,4 @@ tooltip label {
 #network.disconnected {
  /*    padding: 0 14px; */
     /* Center the icon using primitive CSS */
-}
-
-#battery.warning {
-    color: #4d3d6a;
-}
-
-#battery.critical, #temperature.critical {
-    color: #8f6aaf;
-}
-
-#bluetooth {
- /*    padding: 0 14px; */
 }
