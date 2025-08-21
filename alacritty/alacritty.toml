@@ -1,0 +1,10 @@
+[window]
+padding = { x = 10, y = 2 }
+opacity = 0.50
+blur    = true
+
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }

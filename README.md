@@ -37,6 +37,7 @@ dotfiles/
 
 2. **Lier les configs**
    ```sh\
+   ln -s ~/dotfiles/alacritty ~/.config/alacritty 
    ln -s ~/dotfiles/kitty ~/.config/kitty
    ln -s ~/dotfiles/hyprland/hypr ~/.config/hypr
    ln -s ~/dotfiles/waybar ~/.config/waybar
