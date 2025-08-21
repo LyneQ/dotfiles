@@ -1,11 +1,11 @@
-background-color=#0d0d0dcc
-text-color=#fcee09
-border-color=#ff005f
+background-color=#000
+text-color=#f50a1c
+border-color=#f50a1c
 border-size=2
-padding=12
+padding=6
 margin=16
 font=JetBrainsMono Nerd Font 12
-border-radius=10
+border-radius=5
 default-timeout=2000
 max-visible=4
 anchor=top-right
@@ -13,6 +13,6 @@ layer=overlay
 
 
 [urgency=high]
-border-color=#ff2040
-text-color=#ff2040
+border-color=#f50a1c
+text-color=#f50a1c
 
