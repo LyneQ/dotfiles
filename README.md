@@ -4,29 +4,6 @@
 
 ---
 
-## 📦 Structure
-
-```
-dotfiles/
-├── wallpaper                                # fond d'ecran personalisé
-│   ├── wallpaper2077.png
-│   └── wallpaper2077-ly-edition.png 
-├── kitty/                                   # Config terminal Kitty
-│   └── kitty.conf
-├── hyprland/                                # Config Hyprland (Wayland compositor)
-│   └── hypr/
-│       ├── hyprpaper.conf
-│       ├── hyprlock.conf
-│       └── hyprland.conf
-├── waybar/                                  # Barre de statut (Waybar)
-├── zsh/                                     # Shell (Zsh)
-│   ├── .zshalias
-│   └── .zshrc
-└── ...
-```
-
----
-
 ## ⚡ Installation rapide
 
 1. **Clone le repo**
@@ -45,6 +22,7 @@ dotfiles/
    ln -s ~/dotfiles/zsh/.zshalias ~/.zshalias
    ln -s ~/dotfiles/wofi ~/.config/wofi
    ln -s ~/dotfiles/starship.toml  ~/.config/starship.toml
+   ln -s ~/dotfiles/dunst ~/.config/dunst
    ```
 
 ---
