@@ -14,7 +14,9 @@
     "tray",
     "network",
     "bluetooth",
-    "custom/temperature",
+    "custom/cpu",
+    "custom/gpu",
+    "memory",
     "pulseaudio#microphone",
     "pulseaudio",
     "clock",
@@ -81,10 +83,23 @@
     "tooltip-format-enumerate-connected": "{device_alias}",
     "on-click": "blueman-manager"
   },
-  "custom/temperature": {
-    "format": "󱃃 {}°C",
+  "custom/cpu": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/cpu_info.sh",
+    "interval": 2,
+    "tooltip": true
+  },
+  "custom/gpu": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/gpu_info.sh",
+    "interval": 3,
+    "tooltip": true
+  },
+  "memory": {
+    "format": "RAM",
     "interval": 5,
-    "exec": "awk '{printf(\"%d\", $1/1000)}' /sys/class/hwmon/hwmon1/temp1_input"
+    "tooltip": true,
+    "tooltip-format": "{used}/{total}GiB"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",

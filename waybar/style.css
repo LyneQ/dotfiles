@@ -62,7 +62,10 @@ tooltip label {
 #backlight,
 #tray,
 #custom-logo,
-#custom-temperature {
+#custom-temperature,
+#custom-cpu,
+#custom-gpu,
+#memory {
     padding: 0 8px;
     margin: 0;
 }
