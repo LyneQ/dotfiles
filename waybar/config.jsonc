@@ -96,10 +96,10 @@
     "tooltip": true
   },
   "memory": {
-    "format": "RAM",
+    "format": "",
     "interval": 5,
     "tooltip": true,
-    "tooltip-format": "{used}/{total}GiB"
+    "tooltip-format": "{used} / {total} ({percentage}%)"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",

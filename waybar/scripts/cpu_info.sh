@@ -186,8 +186,8 @@ main() {
     tooltip+=$'\n'"Temp: ${package_temp}°C"
   fi
 
-  # Text shown: keep minimal ASCII to avoid font issues; details in tooltip
-  local text="CPU"
+  # Text shown: icon only, details in tooltip
+  local text=""
 
   printf '{"text":"%s","tooltip":"%s","class":"%s"}\n' \
     "$text" "$(printf "%s" "$tooltip" | escape_json)" "normal"

@@ -25,7 +25,7 @@ nvidia_info() {
   temp=$(echo "$temp" | xargs)
   mem_used=$(echo "$mem_used" | xargs)
   mem_total=$(echo "$mem_total" | xargs)
-  local text="GPU"
+  local text="󰢮"
   local tooltip
   tooltip=$(printf 'GPU: %s\nUtil: %s%%\nTemp: %s°C\nVRAM: %s MiB / %s MiB' "$name" "$util" "$temp" "$mem_used" "$mem_total")
   printf '{"text":"%s","tooltip":"%s","class":"%s"}\n' \
@@ -64,7 +64,7 @@ try_sysfs_gpu() {
           local cls="amd"
           if [[ $vendor == *0x10de* ]]; then cls="nvidia"; fi
           if [[ $vendor == *0x8086* ]]; then cls="intel"; fi
-          local text="GPU"
+          local text="󰢮"
           local tooltip
           tooltip=$(printf 'GPU: %s\nTemp: %s°C' "${cls^^}" "$temp")
           if [[ -n $util ]]; then tooltip+=$'\n'"Util: ${util%%.*}%"; fi
@@ -84,7 +84,7 @@ main() {
   if try_sysfs_gpu; then exit 0; fi
   # Fallback if nothing found
   printf '{"text":"%s","tooltip":"%s","class":"%s"}\n' \
-    "GPU" "GPU info unavailable" "unknown"
+    "󰢮" "GPU info unavailable" "unknown"
 }
 
 main
