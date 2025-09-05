@@ -6,7 +6,7 @@
 
 window#waybar {
     color: #e0e0e0;
-    background-color: rgba(4, 4, 4, 0.85);
+    background-color: transparent;
 }
 
 tooltip {
@@ -62,12 +62,12 @@ tooltip label {
 #backlight,
 #tray,
 #custom-logo,
-#custom-temperature,
-#custom-cpu,
-#custom-gpu,
-#memory {
+#custom-temperature {
     padding: 0 8px;
-    margin: 0;
+    margin: 2px 5px;
+    background-color: rgba(4, 4, 4, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 0 12px 2px rgba(245, 10, 28, 0.25);
 }
 
 /*#pulseaudio.microphone {*/

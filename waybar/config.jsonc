@@ -13,10 +13,7 @@
   "modules-right": [
     "tray",
     "network",
-    "bluetooth",
-    "custom/cpu",
-    "custom/gpu",
-    "memory",
+    //"bluetooth",
     "pulseaudio#microphone",
     "pulseaudio",
     "clock",
@@ -82,24 +79,6 @@
     "tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "on-click": "blueman-manager"
-  },
-  "custom/cpu": {
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/cpu_info.sh",
-    "interval": 2,
-    "tooltip": true
-  },
-  "custom/gpu": {
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/gpu_info.sh",
-    "interval": 3,
-    "tooltip": true
-  },
-  "memory": {
-    "format": "",
-    "interval": 5,
-    "tooltip": true,
-    "tooltip-format": "{used} / {total} ({percentage}%)"
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
