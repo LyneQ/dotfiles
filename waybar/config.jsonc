@@ -7,25 +7,24 @@
     "custom/logo",
     "hyprland/workspaces"
   ],
-  //"modules-center": [
+  "modules-center": [
   //"hyprland/window"
-  //],
+    "custom/media"
+  ],
   "modules-right": [
     "tray",
     "network",
     //"bluetooth",
     "pulseaudio#microphone",
     "pulseaudio",
-    "clock",
-    "custom/reboot",
-    "custom/poweroff"
+    "clock"
   ],
   "hyprland/window": {
     "format": "{}"
   },
   "custom/logo": {
     "return-type": "json",
-    "exec": "~/.config/waybar/scripts/distro_icon.sh",
+    "exec": "/home/lynhe/dotfiles/waybar/scripts/distro_icon.sh",
     "interval": 3600,
     "tooltip": true,
     "on-click": "exec wlogout -b 4"
@@ -51,6 +50,16 @@
         4
       ]
     }
+  },
+  "custom/media": {
+    "exec": "/usr/bin/env python3 $HOME/dotfiles/waybar/scripts/mediaplayer.py --player spotify",
+    "return-type": "json",
+    "tail": true,
+    "interval": 0,
+    "tooltip": false,
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous"
   },
   "tray": {
     "icon-size": 18,
@@ -119,18 +128,6 @@
         "today": "<span color='#f50a1c'><b><u>{}</u></b></span>"
       }
     }
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ],
-    "on-scroll-up": "brightnessctl set 10%+",
-    "on-scroll-down": "brightnessctl set 10%-",
-    "min-length": 6
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",

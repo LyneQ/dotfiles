@@ -1,2 +1,7 @@
 .idea
 .idea/*
+
+.junie/*
+
+# Waybar media player logs
+waybar/scripts/media-player.log

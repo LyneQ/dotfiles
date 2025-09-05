@@ -60,9 +60,9 @@ tooltip label {
 #temperature,
 #workspaces,
 #backlight,
-#tray,
 #custom-logo,
-#custom-temperature {
+#custom-temperature,
+#custom-media {
     padding: 0 8px;
     margin: 2px 5px;
     background-color: rgba(4, 4, 4, 0.85);

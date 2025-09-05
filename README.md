@@ -41,18 +41,19 @@ Voir COLORS.md pour la palette complète et les valeurs utilisées.
 
 ## 🧩 Waybar
 
-- Le module matériel (CPU, GPU, Mémoire, Température CPU) est désormais combiné dans un seul module Waybar: `custom/hw`.
-- Les scripts ont été simplifiés pour réduire la complexité: `cpu_info.sh` et `gpu_info.sh` ne fournissent plus que les métriques nécessaires (utilisation et température) et `hw_info.sh` assemble un tooltip minimal.
-- Le script se trouve dans `waybar/scripts/hw_info.sh` et réutilise `cpu_info.sh` et `gpu_info.sh`. Il affiche également la température CPU si disponible (via lm-sensors ou hwmon).
-- Ajoutez/assurez-vous que `~/.config/waybar` pointe vers ce dossier pour charger la config.
+### Module média (custom/media)
+- Dépendances: `playerctl`, `python3-gi` (GObject Introspection), `gir1.2-playerctl-2.0` (selon distro), et un lecteur MPRIS (ex: Spotify, Firefox+YouTube, etc.).
+- Le script utilisé est `waybar/scripts/mediaplayer.py` qui renvoie du JSON pour Waybar.
+- La commande tourne en continu: la config utilise `tail: true` et `interval: 0` pour que Waybar suive le flux JSON du script.
+- Contrôles ciblés: les actions Waybar (clic/scroll) utilisent `playerctl`. Pour ne contrôler que Spotify, utilisez le filtre player: `playerctl -p spotify <cmd>` (ex: play-pause/next/previous). Sinon, `playerctl` peut viser votre navigateur ou le dernier lecteur actif.
+- Si rien ne s'affiche et qu'il n'y a aucune erreur: vérifiez qu'un player MPRIS est présent (`playerctl -l`), sinon le module reste vide par design.
 
 ---
 
 ## 🙏 Crédits
 
 - [cxOrz](https://github.com/cxOrz/dotfiles-hyprland/tree/main/.config) pour la base de la waybar
-- [wildberries](https://www.wildberries.style/) pour les couleurs globales
-
+- [Alexays](https://github.com/Alexays/Waybar) pour le module et script de contrôle des media
 *Made with 🖤, by LyneQ & un max de caféine*
 
 
