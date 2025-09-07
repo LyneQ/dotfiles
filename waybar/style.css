@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
+    font-family: "Nerd Font Symbols", monospace, sans-serif; /* Remplace JetBrainsMono */
     font-weight: normal;
     font-size: 14px;
 }
@@ -30,7 +30,6 @@ tooltip label {
     min-width: 20px;
     border-radius: 14px;
     margin: 4px 0;
-    /*color: #00ffe7;*/
     color: #e0e0e0;
     padding: 2px 4px;
 }
@@ -40,7 +39,6 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    /*background: rgba(0, 255, 231, 0.15);*/
     color: #46ebeb;
     background: none;
     border: none;
@@ -62,12 +60,20 @@ tooltip label {
 #backlight,
 #custom-logo,
 #custom-temperature,
-#custom-media {
+#custom-media,
+#custom-hw {
     padding: 0 8px;
     margin: 2px 5px;
     background-color: rgba(4, 4, 4, 0.85);
     border-radius: 10px;
     box-shadow: 0 0 12px 2px rgba(245, 10, 28, 0.25);
+}
+
+#custom-hw {
+    color: #e0e0e0;
+    font-size: 16px;
+    padding: 0 12px;
+    padding-right: 14px;
 }
 
 /*#pulseaudio.microphone {*/
@@ -78,32 +84,27 @@ tooltip label {
 /*    color: #f50a1c;*/
 /*}*/
 
-
-
 #network {
-    /*border-radius: 18px 0 0 18px;*/
- /*    padding: 0 14px; */
+    /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
-
 }
 
 #network.ethernet {
- /*    padding: 0 14px; */
+    /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
 }
 
 #network.wifi {
-
- /*    padding: 0 14px; */
+    /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
 }
 
 #network.linked {
- /*    padding: 0 14px; */
+    /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
 }
 
 #network.disconnected {
- /*    padding: 0 14px; */
+    /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
 }

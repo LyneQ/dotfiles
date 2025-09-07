@@ -15,6 +15,7 @@
     "tray",
     "network",
     //"bluetooth",
+    "custom/hw",
     "pulseaudio#microphone",
     "pulseaudio",
     "clock"
@@ -24,7 +25,7 @@
   },
   "custom/logo": {
     "return-type": "json",
-    "exec": "/home/lynhe/dotfiles/waybar/scripts/distro_icon.sh",
+    "exec": "~/.config/waybar/scripts/distro_icon.sh",
     "interval": 3600,
     "tooltip": true,
     "on-click": "exec wlogout -b 4"
@@ -88,6 +89,13 @@
     "tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
     "on-click": "blueman-manager"
+  },
+  "custom/hw": {
+    "exec": "~/.config/waybar/scripts/hw_info.sh",
+    "format": "{}",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",

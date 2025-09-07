@@ -41,12 +41,27 @@ Voir COLORS.md pour la palette complète et les valeurs utilisées.
 
 ## 🧩 Waybar
 
-### Module média (custom/media)
+### Détails modules
+#### Module média (custom/media)
 - Dépendances: `playerctl`, `python3-gi` (GObject Introspection), `gir1.2-playerctl-2.0` (selon distro), et un lecteur MPRIS (ex: Spotify, Firefox+YouTube, etc.).
-- Le script utilisé est `waybar/scripts/mediaplayer.py` qui renvoie du JSON pour Waybar.
-- La commande tourne en continu: la config utilise `tail: true` et `interval: 0` pour que Waybar suive le flux JSON du script.
-- Contrôles ciblés: les actions Waybar (clic/scroll) utilisent `playerctl`. Pour ne contrôler que Spotify, utilisez le filtre player: `playerctl -p spotify <cmd>` (ex: play-pause/next/previous). Sinon, `playerctl` peut viser votre navigateur ou le dernier lecteur actif.
-- Si rien ne s'affiche et qu'il n'y a aucune erreur: vérifiez qu'un player MPRIS est présent (`playerctl -l`), sinon le module reste vide par design.
+- Script: `waybar/scripts/mediaplayer.py` (sortie JSON suivie par Waybar).
+- Exécution continue: `tail: true`, `interval: 0`.
+- Contrôles Spotify: clic = play/pause, scroll up = next, scroll down = previous (via `playerctl -p spotify`).
+- Si rien n'apparaît: vérifier `playerctl -l` (un player MPRIS doit être présent).
+
+#### Module matériel (custom/hw)
+- Script: `waybar/scripts/hw_info.sh` — affiche CPU/GPU/RAM/Temp en JSON.
+- Intervalle: 5s. Tooltip activé.
+
+#### Réseau (network)
+- Icônes Wi‑Fi dynamiques, Ethernet: 󰈁, Déconnecté: 󰤮. Tooltips avec essid/ifname.
+
+#### Audio
+- `pulseaudio#microphone`: mute toggle sur clic, volume via scroll (limite 130%).
+- `pulseaudio`: icônes casques/haut‑parleurs, mute toggle, scroll pour volume.
+
+#### Horloge (clock)
+- Format: `HH:MM ddd MM/DD`. Calendrier stylé aux couleurs d’accent.
 
 ---
 

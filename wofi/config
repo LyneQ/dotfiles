@@ -10,4 +10,4 @@ term=alacritty
 hide_scroll=true
 print_command=true
 insensitive=true
-columns=2
+columns=1
