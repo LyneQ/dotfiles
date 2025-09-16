@@ -35,7 +35,7 @@
 
 ## 🎨 Couleurs
 
-Voir COLORS.md pour la palette complète et les valeurs utilisées.
+Voir [COLORS.md](/_assets/COLORS.md) pour la palette complète et les valeurs utilisées.
 
 ---
 
@@ -50,11 +50,20 @@ Voir COLORS.md pour la palette complète et les valeurs utilisées.
 - Si rien n'apparaît: vérifier `playerctl -l` (un player MPRIS doit être présent).
 
 #### Module matériel (custom/hw)
-- Script: `waybar/scripts/hw_info.sh` — affiche CPU/GPU/RAM/Temp en JSON.
+- Script: `waybar/scripts/hw_info.sh` — affiche CPU/GPU/RAM/Temp en JSON (construction JSON sûre via `jq` si disponible, sinon échappement de secours).
+- Dépendances suggérées: `jq` (pour sérialisation JSON robuste), `nvidia-smi` ou `radeontop` selon GPU.
 - Intervalle: 5s. Tooltip activé.
 
 #### Réseau (network)
-- Icônes Wi‑Fi dynamiques, Ethernet: 󰈁, Déconnecté: 󰤮. Tooltips avec essid/ifname.
+- Un seul module: custom/network (script net_status.sh). Affiche une icône; le tooltip montre l’état consolidé Wi‑Fi/Ethernet et la connectivité Internet.
+- Logique du tooltip:
+  - Si connecté avec Internet: "<SSID> (connected) <IP>"
+  - Si connecté sans Internet: "<SSID ou IFNAME> (connected without internet) <IP>".
+  - Si non connecté: "Unknown (disconnected)" (IP ajoutée si disponible).
+- Détection: nmcli networking connectivity (full/local/limited/portal/none). Sélection d’interface: si un Wi‑Fi est connecté, il est prioritaire; sinon interface de la route par défaut (ip route).
+- Nom affiché: SSID pour le Wi‑Fi; pour l’Ethernet: hostname de la passerelle sinon nom de connexion NetworkManager, sinon nom d’interface.
+  - Note: on ignore certains noms de passerelle non parlants (ex: "blocked.local", "localhost"). Dans ce cas, on retombe sur le nom de connexion NM ou l’interface.
+- Dépendances: NetworkManager (nmcli), iproute2, iwgetid (wireless-tools) recommandé.
 
 #### Audio
 - `pulseaudio#microphone`: mute toggle sur clic, volume via scroll (limite 130%).
