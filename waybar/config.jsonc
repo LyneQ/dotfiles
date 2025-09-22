@@ -34,14 +34,10 @@
     "format": "{icon}",
     "format-icons": {
       "1": " ",
-      // Firefox
       "2": " ",
-      // Discord,
       "3": " ",
-      // Code,
-      "4": " ",
-      // Spotify
-      "default": ""
+      "4": " ",
+      "default": " "
     },
     "persistent-workspaces": {
       "*": [
@@ -64,7 +60,7 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 20
+    "spacing": 10
   },
   "custom/network": {
     "exec": "$HOME/.config/waybar/scripts/net_status.sh",

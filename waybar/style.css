@@ -85,7 +85,8 @@ tooltip label {
 /*}*/
 
 #custom-network {
-    /*padding: 0 14px; */
+    margin-left: 10px;
+    /*padding: 0 14px;*/
     /* Center the icon using primitive CSS */
 }
 
