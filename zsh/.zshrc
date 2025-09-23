@@ -71,3 +71,6 @@ eval "$(starship init zsh)"
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export XDG_OPEN_PREFER_NONPORTAL=1
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
