@@ -74,10 +74,32 @@ Voir [COLORS.md](/_assets/COLORS.md) pour la palette complète et les valeurs ut
 
 ---
 
+## 💫 Starship Prompt
+
+- Config: starship.toml (à lier vers ~/.config/starship.toml — déjà indiqué plus haut)
+- Projet: https://starship.rs
+- Police: nécessite une Nerd Font (ex: JetBrainsMono Nerd Font) pour les icônes.
+- Activation (exemple Zsh): ajoute dans ~/.zshrc
+  ```sh
+  eval "$(starship init zsh)"
+  ```
+- Installation rapide de starship:
+  - Arch: `sudo pacman -S starship`
+  - Debian/Ubuntu: `sudo apt install starship`
+  - Universel: `curl -sS https://starship.rs/install.sh | sh`
+
+- Modules langues affichés: Python, Node.js, Go, Rust, Java, PHP (version affichée; Python affiche aussi l'environnement virtuel).
+
+Origine: configuration Starship adaptée/inspirée de p3rception/dotfiles:
+https://github.com/p3rception/dotfiles
+
+---
+
 ## 🙏 Crédits
 
 - [cxOrz](https://github.com/cxOrz/dotfiles-hyprland/tree/main/.config) pour la base de la waybar
 - [Alexays](https://github.com/Alexays/Waybar) pour le module et script de contrôle des media
+- [p3rception](https://github.com/p3rception/dotfiles) pour l'inspiration de la configuration Starship
 *Made with 🖤, by LyneQ & un max de caféine*
 
 
