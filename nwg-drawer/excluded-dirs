@@ -1,0 +1,8 @@
+lib
+node_modules
+.cache
+.git
+venv
+build
+/home/lynhe/.local/share/JetBrains/Toolbox/apps/fleet/lib
+/home/lynhe/.local/share/flatpak/app

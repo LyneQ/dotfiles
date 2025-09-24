@@ -50,6 +50,8 @@ link "$repo_dir/hyprland/hypr" "$HOME/.config/hypr"
 link "$repo_dir/waybar" "$HOME/.config/waybar"
 link "$repo_dir/wofi" "$HOME/.config/wofi"
 link "$repo_dir/dunst" "$HOME/.config/dunst"
+link "$repo_dir/nwg-drawer" "$HOME/.config/nwg-drawer"
+link "$repo_dir/nwg-dock-hyprland" "$HOME/.config/nwg-dock-hyprland"
 link "$repo_dir/starship.toml" "$HOME/.config/starship.toml"
 
 # Zsh files (optional)

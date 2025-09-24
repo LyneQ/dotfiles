@@ -1,0 +1,43 @@
+window {
+    /* Dark glass background to match palette */
+    background: rgba(4, 4, 4, 0.85);
+    border-radius: 10px;
+}
+
+#box {
+    /* Define attributes of the box surrounding icons here */
+    padding: 10px
+}
+
+#active {
+    /* Underline the button representing the currently active window with primary accent */
+    border-bottom: solid 2px;
+    border-color: #f50a1c;
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    /* Neutral foreground */
+    color: #e0e0e0;
+}
+
+button {
+    padding: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #e0e0e0;
+    font-size: 8px
+}
+
+button:hover {
+    /* Cyan-tinted hover to match secondary accent */
+    background-color: rgba(235, 70, 70, 0.15);
+    border-radius: 2px;
+}
+
+button:focus {
+    /* Remove default focus shadow */
+    box-shadow: none
+}

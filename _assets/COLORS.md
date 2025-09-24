@@ -45,7 +45,8 @@ Example UI combo: dark glass background with neon red borders and selections, wi
 
 ## Backgrounds & Surfaces
 - bg-glass: rgba(4, 4, 4, 0.85)
-  - Used by: Waybar window, Wofi window
+  - Used by: Waybar window, Wofi window, nwg-dock window
+  - Note: nwg-drawer uses a lighter glass variant at rgba(4, 4, 4, 0.65) for higher transparency
 - bg-surface: #1a1a1a
   - Used by: Wofi input, tooltips background
 
@@ -63,10 +64,14 @@ Example UI combo: dark glass background with neon red borders and selections, wi
     - Waybar: tooltip border, active workspace
     - Wofi: window border, selected entry background
     - Dunst: frame/separator
+    - nwg-dock: window border, active indicator underline
+    - nwg-drawer: window border
 - cyan-accent: #46ebeb
   - Subtitles / usage:
     - Wofi: arrow color
     - Waybar: hover state for workspace buttons
+    - nwg-dock: button hover background tint
+    - nwg-drawer: button hover background tint
 - accent-glow (red shadow): rgba(245, 10, 28, 0.25)
   - Subtitles / usage:
     - Wofi/Waybar: drop shadow/glow effects

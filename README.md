@@ -29,6 +29,8 @@
    ln -s ~/dotfiles/wofi ~/.config/wofi
    ln -s ~/dotfiles/starship.toml  ~/.config/starship.toml
    ln -s ~/dotfiles/dunst ~/.config/dunst
+   ln -s ~/dotfiles/nwg-drawer ~/.config/nwg-drawer
+   ln -s ~/dotfiles/nwg-dock-hyprland ~/.config/nwg-dock-hyprland
    ```
 
 ---
