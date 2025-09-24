@@ -6,7 +6,8 @@ set -euo pipefail
 # Installs required packages and creates symlinks to ~/.config
 
 # Package lists (edit here to add/remove packages once for each PM)
-PKGS_PACMAN="hyprland waybar wofi dunst kitty alacritty starship ttf-jetbrains-mono-nerd noto-fonts-emoji wl-clipboard grim slurp swappy brightnessctl bluez-utils network-manager-applet pavucontrol fastfetch"
+# Note: On Arch, nwg-drawer is in the official repos; nwg-dock-hyprland is AUR-only (installed via yay if available).
+PKGS_PACMAN="hyprland waybar wofi dunst kitty alacritty starship ttf-jetbrains-mono-nerd noto-fonts-emoji wl-clipboard grim slurp swappy brightnessctl bluez-utils network-manager-applet pavucontrol fastfetch nwg-drawer"
 PKGS_APT="hyprland waybar wofi dunst kitty alacritty starship fonts-jetbrains-mono fonts-noto-color-emoji wl-clipboard grim slurp swappy brightnessctl bluez blueman network-manager-gnome pavucontrol fastfetch"
 PKGS_DNF="hyprland waybar wofi dunst kitty alacritty starship jetbrains-mono-fonts noto-emoji-fonts wl-clipboard grim slurp swappy brightnessctl bluez blueman NetworkManager-applet pavucontrol fastfetch"
 
@@ -20,6 +21,12 @@ fi
 pm=""
 if need_cmd pacman; then
   pm="pacman"; sudo pacman -Syu --needed ${PKGS_PACMAN}
+  # Install AUR packages with yay if available
+  if need_cmd yay; then
+    yay -S --needed nwg-dock-hyprland || true
+  else
+    echo "Tip: 'nwg-dock-hyprland' is AUR-only. Install yay to auto-install it, or install manually." >&2
+  fi
 elif need_cmd apt; then
   pm="apt"; sudo apt update && sudo apt install -y ${PKGS_APT}
 elif need_cmd dnf; then
@@ -53,6 +60,11 @@ link "$repo_dir/dunst" "$HOME/.config/dunst"
 link "$repo_dir/nwg-drawer" "$HOME/.config/nwg-drawer"
 link "$repo_dir/nwg-dock-hyprland" "$HOME/.config/nwg-dock-hyprland"
 link "$repo_dir/starship.toml" "$HOME/.config/starship.toml"
+
+# Utility scripts
+mkdir -p "$HOME/scripts"
+chmod +x "$repo_dir/update.sh" || true
+link "$repo_dir/update.sh" "$HOME/scripts/update.sh"
 
 # Zsh files (optional)
 if [ -f "$repo_dir/zsh/.zshrc" ]; then link "$repo_dir/zsh/.zshrc" "$HOME/.zshrc"; fi

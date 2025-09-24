@@ -31,7 +31,10 @@
    ln -s ~/dotfiles/dunst ~/.config/dunst
    ln -s ~/dotfiles/nwg-drawer ~/.config/nwg-drawer
    ln -s ~/dotfiles/nwg-dock-hyprland ~/.config/nwg-dock-hyprland
+   ln -s ~/dotfiles/update.sh ~/scripts/update.sh
    ```
+
+> Arch Linux: l'installateur ajoutera nwg-drawer via pacman. Pour `nwg-dock-hyprland` (AUR), s'il détecte `yay`, il l'installera automatiquement; sinon, installez-le manuellement avec yay ou votre helper AUR préféré.
 
 ---
 
