@@ -6,7 +6,7 @@
 
 window#waybar {
     color: #e0e0e0;
-    background-color: transparent;
+    background-color: rgba(4, 4, 4, 0.85);
 }
 
 tooltip {
@@ -14,7 +14,6 @@ tooltip {
     border-radius: 10px;
     border: 1px solid #f50a1c;
     font-size: 13px;
-    padding: 4px 10px;
 }
 
 tooltip label {
@@ -27,21 +26,14 @@ tooltip label {
 
 /* Left workspace buttons */
 #workspaces button {
-    min-width: 20px;
+    min-width: 10px;
     border-radius: 14px;
-    margin: 4px 0;
     color: #e0e0e0;
     padding: 2px 4px;
 }
 
 #workspaces button:not(:last-child) {
     margin-right: 2px;
-}
-
-#workspaces button:hover {
-    color: #46ebeb;
-    background: none;
-    border: none;
 }
 
 #workspaces button.active,
@@ -62,54 +54,22 @@ tooltip label {
 #custom-temperature,
 #custom-media,
 #custom-hw {
-    padding: 0 8px;
-    margin: 2px 5px;
+    margin: 0 8px;
     background-color: rgba(4, 4, 4, 0.85);
     border-radius: 10px;
-
 }
 
 #custom-hw {
     color: #e0e0e0;
     font-size: 16px;
-    padding: 0 12px;
-    padding-right: 16px;
-}
-
-/*#pulseaudio.microphone {*/
-/*    color: #00ffe7;*/
-/*}*/
-
-/*#pulseaudio.microphone.muted {*/
-/*    color: #f50a1c;*/
-/*}*/
-
-#custom-network {
-    margin-left: 10px;
-    /*padding: 0 14px;*/
-    /* Center the icon using primitive CSS */
-}
-
-#network.ethernet {
-    /*padding: 0 14px; */
-    /* Center the icon using primitive CSS */
-}
-
-#network.wifi {
-    /*padding: 0 14px; */
-    /* Center the icon using primitive CSS */
-}
-
-#network.linked {
-    /*padding: 0 14px; */
-    /* Center the icon using primitive CSS */
-}
-
-#network.disconnected {
-    /*padding: 0 14px; */
-    /* Center the icon using primitive CSS */
+    padding: 0;
+    margin: 0 6px 0 0;
 }
 
 #custom-notification  {
     padding: 0 16px;
+}
+
+#tray {
+    margin: 0 6px;
 }
