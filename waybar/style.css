@@ -109,3 +109,7 @@ tooltip label {
     /*padding: 0 14px; */
     /* Center the icon using primitive CSS */
 }
+
+#custom-notification  {
+    padding: 0 16px;
+}
