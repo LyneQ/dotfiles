@@ -22,6 +22,7 @@ tooltip label {
 
 #workspaces {
     padding: 0 2px;
+    margin: 0;
 }
 
 /* Left workspace buttons */

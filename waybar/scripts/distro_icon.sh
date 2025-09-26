@@ -51,4 +51,4 @@ esac
 # Output JSON for Waybar (text, tooltip, class)
 # Ensure proper escaping for JSON
 escape_json() { local s="$1"; s="${s//\\/\\\\}"; s="${s//\"/\\\"}"; printf '%s' "$s"; }
-printf '{"text":"%s","tooltip":"%s","class":"%s"}\n' "${icon} " "$(escape_json "$pretty")" "${id}"
+printf '{"text":"%s","tooltip":"%s","class":"%s"}\n' "${icon}" "$(escape_json "$pretty")" "${id}"
