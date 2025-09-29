@@ -7,9 +7,9 @@ set -euo pipefail
 
 # Package lists (edit here to add/remove packages once for each PM)
 # Note: On Arch, nwg-drawer is in the official repos; nwg-dock-hyprland is AUR-only (installed via yay if available).
-PKGS_PACMAN="hyprland waybar wofi dunst kitty alacritty starship ttf-jetbrains-mono-nerd noto-fonts-emoji wl-clipboard grim slurp swappy brightnessctl bluez-utils network-manager-applet pavucontrol fastfetch nwg-drawer"
-PKGS_APT="hyprland waybar wofi dunst kitty alacritty starship fonts-jetbrains-mono fonts-noto-color-emoji wl-clipboard grim slurp swappy brightnessctl bluez blueman network-manager-gnome pavucontrol fastfetch"
-PKGS_DNF="hyprland waybar wofi dunst kitty alacritty starship jetbrains-mono-fonts noto-emoji-fonts wl-clipboard grim slurp swappy brightnessctl bluez blueman NetworkManager-applet pavucontrol fastfetch"
+PKGS_PACMAN="hyprland waybar wofi dunst kitty alacritty starship ttf-jetbrains-mono-nerd noto-fonts-emoji wl-clipboard cliphist grim slurp swappy brightnessctl bluez-utils network-manager-applet pavucontrol fastfetch nwg-drawer"
+PKGS_APT="hyprland waybar wofi dunst kitty alacritty starship fonts-jetbrains-mono fonts-noto-color-emoji wl-clipboard cliphist grim slurp swappy brightnessctl bluez blueman network-manager-gnome pavucontrol fastfetch"
+PKGS_DNF="hyprland waybar wofi dunst kitty alacritty starship jetbrains-mono-fonts noto-emoji-fonts wl-clipboard cliphist grim slurp swappy brightnessctl bluez blueman NetworkManager-applet pavucontrol fastfetch"
 
 need_cmd() { command -v "$1" >/dev/null 2>&1; }
 

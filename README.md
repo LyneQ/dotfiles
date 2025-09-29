@@ -36,6 +36,11 @@
 
 > Arch Linux: l'installateur ajoutera nwg-drawer via pacman. Pour `nwg-dock-hyprland` (AUR), s'il détecte `yay`, il l'installera automatiquement; sinon, installez-le manuellement avec yay ou votre helper AUR préféré.
 
+> Historique du presse-papiers: nécessite `cliphist` (utilisé par wl-paste/wofi et les scripts de ce repo). L’installateur l’installe automatiquement. Si vous installez manuellement:
+> - Arch: `sudo pacman -S cliphist`
+> - Debian/Ubuntu: `sudo apt install cliphist`
+> - Fedora: `sudo dnf install cliphist`
+
 ---
 
 ## 🎨 Couleurs
