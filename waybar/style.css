@@ -1,3 +1,13 @@
+@define-color bg_glass rgba(4, 4, 4, 0.85);
+@define-color bg_surface #1a1a1a;
+@define-color fg #e0e0e0;
+@define-color accent #f50a1c;
+@define-color accent_2 #46ebeb;
+@define-color accent_glow rgba(245, 10, 28, 0.25);
+
+@define-color ws_hover_fg #fc7272;
+@define-color hover_tint rgba(255, 255, 255, 0.03);
+
 * {
     font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
     font-weight: normal;
@@ -5,19 +15,19 @@
 }
 
 window#waybar {
-    color: #e0e0e0;
-    background-color: rgba(4, 4, 4, 0.85);
+    color: @fg;
+    background-color: @bg_glass;
 }
 
 tooltip {
-    background: #1a1a1a;
+    background: @bg_surface;
     border-radius: 10px;
-    border: 1px solid #f50a1c;
+    border: 1px solid @accent;
     font-size: 13px;
 }
 
 tooltip label {
-    color: #e0e0e0;
+    color: @fg;
 }
 
 #workspaces {
@@ -29,8 +39,13 @@ tooltip label {
 #workspaces button {
     min-width: 10px;
     border-radius: 14px;
-    color: #e0e0e0;
+    color: @fg;
     padding: 2px 4px;
+}
+
+#workspaces button:hover {
+    background-color: @hover_tint;
+    color: @ws_hover_fg;
 }
 
 #workspaces button:not(:last-child) {
@@ -39,7 +54,7 @@ tooltip label {
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    color: #f50a1c;
+    color: @accent;
 }
 
 #clock,
@@ -56,12 +71,12 @@ tooltip label {
 #custom-media,
 #custom-hw {
     margin: 0 8px;
-    background-color: rgba(4, 4, 4, 0.85);
+    background-color: @bg_glass;
     border-radius: 10px;
 }
 
 #custom-hw {
-    color: #e0e0e0;
+    color: @fg;
     font-size: 16px;
     padding: 0;
     margin: 0 6px 0 0;
