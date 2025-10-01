@@ -14,7 +14,6 @@
   "modules-right": [
     "tray",
     "custom/network",
-    //"bluetooth",
     "custom/hw",
     "pulseaudio#source",
     "pulseaudio#sink",
@@ -125,7 +124,7 @@
   },
   "custom/notification": {
     "tooltip": false,
-    "format": "{icon}",
+    "format": "{0} {icon}",
     "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
       "none": "",
