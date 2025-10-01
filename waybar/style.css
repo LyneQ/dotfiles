@@ -82,8 +82,13 @@ tooltip label {
     margin: 0 6px 0 0;
 }
 
-#pulseaudio.sink {
+#pulseaudio.sink,
+#pulseaudio.source {
     margin: 0;
+}
+
+#pulseaudio.source {
+    margin-right: 6px;
 }
 
 #pulseaudio.sink.muted
@@ -101,4 +106,9 @@ tooltip label {
 
 #tray {
     margin: 0 6px;
+}
+
+#clock {
+    margin: 0;
+    font-style: italic;
 }

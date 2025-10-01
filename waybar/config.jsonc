@@ -15,8 +15,10 @@
     "tray",
     "custom/network",
     "custom/hw",
+    "custom/spacer",
     "pulseaudio#source",
     "pulseaudio#sink",
+    "custom/spacer",
     "clock",
     "custom/notification"
   ],
@@ -85,7 +87,7 @@
   "pulseaudio#source": {
     "format": "{format_source}",
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pwvucontrol",
     "on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%+",
@@ -141,5 +143,9 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "custom/spacer": {
+    "format": " | ",
+    "tooltip": false
   }
 }
