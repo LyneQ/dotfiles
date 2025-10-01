@@ -16,8 +16,8 @@
     "custom/network",
     //"bluetooth",
     "custom/hw",
-    "pulseaudio#microphone",
-    "pulseaudio",
+    "pulseaudio#source",
+    "pulseaudio#sink",
     "clock",
     "custom/notification"
   ],
@@ -83,21 +83,21 @@
     "interval": 5,
     "tooltip": true
   },
-  "pulseaudio#microphone": {
+  "pulseaudio#source": {
     "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
+    "format-source": "",
+    "format-source-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pwvucontrol",
     "on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%+",
     "on-scroll-down": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%-",
     "scroll-step": 5
   },
-  "pulseaudio": {
+  "pulseaudio#sink": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰖁 0%",
+    "format-muted": "󰖁 {volume}%",
     "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pwvucontrol",
     "on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
     "scroll-step": 5,

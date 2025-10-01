@@ -60,7 +60,7 @@ tooltip label {
 #clock,
 #battery,
 #pulseaudio,
-#pulseaudio.microphone,
+#pulseaudio.source,
 #custom-network,
 #bluetooth,
 #temperature,
@@ -80,6 +80,15 @@ tooltip label {
     font-size: 16px;
     padding: 0;
     margin: 0 6px 0 0;
+}
+
+#pulseaudio.sink.muted
+{
+    color: @accent;
+}
+
+#pulseaudio.source.muted {
+    color: @accent;
 }
 
 #custom-notification  {
