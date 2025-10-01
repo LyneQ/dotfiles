@@ -82,6 +82,10 @@ tooltip label {
     margin: 0 6px 0 0;
 }
 
+#pulseaudio.sink {
+    margin: 0;
+}
+
 #pulseaudio.sink.muted
 {
     color: @accent;
