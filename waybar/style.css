@@ -69,8 +69,7 @@ tooltip label {
 #custom-logo,
 #custom-temperature,
 #custom-media,
-#custom-hw,
-#custom-notification {
+#custom-hw {
     margin: 0 8px;
     background-color: @bg_glass;
     border-radius: 10px;
