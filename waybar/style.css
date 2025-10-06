@@ -16,7 +16,7 @@
 
 window#waybar {
     color: @fg;
-    background-color: @bg_glass;
+    background-color: @bg_surface;
 }
 
 tooltip {
@@ -71,7 +71,6 @@ tooltip label {
 #custom-media,
 #custom-hw {
     margin: 0 8px;
-    background-color: @bg_glass;
     border-radius: 10px;
 }
 
