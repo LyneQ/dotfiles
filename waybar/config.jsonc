@@ -8,13 +8,13 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-  //"hyprland/window"
+//  "hyprland/window",
     "custom/media"
   ],
   "modules-right": [
     "tray",
-    "custom/network",
-    "custom/hw",
+    "network",
+    "group/hardware",
     "custom/spacer",
     "pulseaudio#source",
     "pulseaudio#sink",
@@ -37,7 +37,7 @@
     "format-icons": {
       "1": " ",
       "2": " ",
-      "3": " ",
+      "3": " ",
       "default": " "
     },
     "persistent-workspaces": {
@@ -62,11 +62,18 @@
     "icon-size": 18,
     "spacing": 10
   },
-  "custom/network": {
-    "exec": "$HOME/.config/waybar/scripts/net_status.sh",
-    "return-type": "json",
-    "interval": 5,
-    "tooltip": true
+  "network": {
+    "interface": "enp8s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "\uDB80\uDE00 ",
+    "format-disconnected": "disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}\nIP: {ipaddr}\nInterface: {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 1
   },
   "bluetooth": {
     "format": "󰂯",
@@ -77,12 +84,44 @@
     "tooltip-format-enumerate-connected": "{device_alias}",
     "on-click": "blueman-manager"
   },
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "custom/hw",
+      "transition-left-to-right": false
+    },
+    "spacing": 10,
+    "modules": [
+      "custom/hw",
+      "power-profiles-daemon",
+      "memory"
+    ]
+  },
   "custom/hw": {
     "exec": "$HOME/.config/waybar/scripts/hw_info.sh",
     "format": "{}",
     "return-type": "json",
-    "interval": 5,
+    "interval": 15,
     "tooltip": true
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "memory": {
+    "interval": 30,
+    "format": "\uEFC5 ",
+    "tooltip-format": "{used:0.1f}GB used",
+    "tooltip" : true,
+    "max-length": 10
   },
   "pulseaudio#source": {
     "format": "{format_source}",
@@ -113,7 +152,7 @@
     }
   },
   "clock": {
-    "format": "{:%R %a %m/%d}",
+    "format": "{:%R %m/%d}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "format": {

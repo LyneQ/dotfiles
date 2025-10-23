@@ -5,6 +5,4 @@ alias cls="clear"
 alias c="clear"
 alias ls="lsd -lah"
 alias home="cd ~"
-alias dev="cd /mnt/Mint/Projects"
-alias ff='fastfetch --logo arch_small --structure "os:kernel:cpu:shell:uptime:memory"'
-alias update="sudo ~/scripts/update.sh"
+alias hx="helix"

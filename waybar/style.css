@@ -61,7 +61,6 @@ tooltip label {
 #battery,
 #pulseaudio,
 #pulseaudio.source,
-#custom-network,
 #bluetooth,
 #temperature,
 #workspaces,
@@ -69,8 +68,12 @@ tooltip label {
 #custom-logo,
 #custom-temperature,
 #custom-media,
-#custom-hw {
-    margin: 0 8px;
+#custom-hw,
+#network,
+#power-profiles-daemon,
+#memory
+{
+    margin: 0 4px;
     border-radius: 10px;
 }
 

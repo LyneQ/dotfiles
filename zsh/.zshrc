@@ -24,7 +24,8 @@ plugins=(
   nvm
   zsh-autosuggestions
   zsh-syntax-highlighting
-  #zsh-autocomplete
+  fast-syntax-highlighting
+#  zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -62,8 +63,6 @@ source ~/.zshalias
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-printf '\n'
 
 eval "$(starship init zsh)"
 

@@ -31,7 +31,6 @@
    ln -s ~/dotfiles/dunst ~/.config/dunst
    ln -s ~/dotfiles/nwg-drawer ~/.config/nwg-drawer
    ln -s ~/dotfiles/nwg-dock-hyprland ~/.config/nwg-dock-hyprland
-   ln -s ~/dotfiles/update.sh ~/scripts/update.sh
    ln -s ~/dotfiles/fastfetch/ ~/.config/fastfetch
    ```
 
