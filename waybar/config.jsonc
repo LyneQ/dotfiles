@@ -14,6 +14,7 @@
   "modules-right": [
     "tray",
     "network",
+    "bluetooth",
     "group/hardware",
     "custom/spacer",
     "pulseaudio#source",
@@ -68,6 +69,7 @@
     "format-wifi": "{essid} ({signalStrength}%) ",
     "format-ethernet": "\uDB80\uDE00 ",
     "format-disconnected": "disconnected",
+    "on-click": "iwgtk",
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}\nIP: {ipaddr}\nInterface: {ifname}",
@@ -76,12 +78,12 @@
     "interval": 1
   },
   "bluetooth": {
-    "format": "󰂯",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱 {num_connections}",
+    "format": "󰂯 ",
+    "format-disabled": "󰂲 ",
+    "format-connected": "󰂱 {num_connections} ",
     "tooltip-format": "{controller_alias}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected": "{device_alias} ",
     "on-click": "blueman-manager"
   },
   "group/hardware": {

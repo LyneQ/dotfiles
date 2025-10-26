@@ -1,12 +1,12 @@
 @define-color bg_glass rgba(4, 4, 4, 0.85);
-@define-color bg_surface #1a1a1a;
+@define-color bg_surface rgba(0, 0, 0, 0.5);
 @define-color fg #e0e0e0;
 @define-color accent #f50a1c;
 @define-color accent_2 #46ebeb;
 @define-color accent_glow rgba(245, 10, 28, 0.25);
 
 @define-color ws_hover_fg #fc7272;
-@define-color hover_tint rgba(255, 255, 255, 0.03);
+@define-color hover_tint rgba(0, 0, 0, 0.5);
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
@@ -44,7 +44,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: @hover_tint;
+    /*background-color: @hover_tint;*/
     color: @ws_hover_fg;
 }
 
