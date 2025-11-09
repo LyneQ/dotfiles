@@ -1,12 +1,15 @@
-@define-color bg_glass rgba(4, 4, 4, 0.85);
-@define-color bg_surface rgba(0, 0, 0, 0.5);
-@define-color fg #e0e0e0;
-@define-color accent #f50a1c;
-@define-color accent_2 #46ebeb;
-@define-color accent_glow rgba(245, 10, 28, 0.25);
+@define-color bg_surface rgba(25, 25, 25, 1);
+@define-color primary rgb(140, 140, 140);
+@define-color secondary rgba(100, 100, 100, 1);
+@define-color text_default rgba(224, 224, 224, 1);
+@define-color background_default rgba(26, 26, 26, 1);
+@define-color background_alt rgba(4, 4, 4, 1);
+@define-color background_default_alt rgba(46, 49, 51, 1);
 
-@define-color ws_hover_fg #fc7272;
-@define-color hover_tint rgba(0, 0, 0, 0.5);
+@define-color audio_muted rgba(255, 0, 0, 1);
+
+
+/* General */
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace, sans-serif;
@@ -14,103 +17,70 @@
     font-size: 14px;
 }
 
+*:hover {
+    background: unset;
+    color: red;
+}
+
+
 window#waybar {
-    color: @fg;
-    background-color: @bg_surface;
+    font-family: inherit;
+    background: unset;
 }
 
-tooltip {
-    background: @bg_surface;
-    border-radius: 10px;
-    border: 1px solid @accent;
-    font-size: 13px;
+window#waybar:hover {
+    color: blue;
 }
 
-tooltip label {
-    color: @fg;
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
-#workspaces {
-    padding: 0 2px;
-    margin: 0;
+/* Apply to all modules */
+.module {
+    background-color: @background_default;
+    padding: 4px 3px;
+    margin: 0 3px;
+    border-radius: 4px;
 }
 
-/* Left workspace buttons */
+/* Workspace */
 #workspaces button {
-    min-width: 10px;
-    border-radius: 14px;
-    color: @fg;
-    padding: 2px 4px;
+    background-color: @background_default_alt ;
+    border-radius: 4px;
+    padding: 0 3px;
+    margin: 0 3px;
+    color: @primary;
 }
 
-#workspaces button:hover {
-    /*background-color: @hover_tint;*/
-    color: @ws_hover_fg;
+#workspaces button.active {
+    color: @text_default;
 }
 
-#workspaces button:not(:last-child) {
-    margin-right: 2px;
+/* Window */
+#window {
+    background-color: @background_default;
+    padding: 0 6px;
+    margin: 0 3px;
+    color: @primary;
 }
 
-#workspaces button.active,
-#workspaces button.active:hover {
-    color: @accent;
-}
-
+#mpris,
 #clock,
-#battery,
-#pulseaudio,
-#pulseaudio.source,
-#bluetooth,
-#temperature,
-#workspaces,
-#backlight,
-#custom-logo,
-#custom-temperature,
-#custom-media,
-#custom-hw,
-#network,
-#power-profiles-daemon,
-#memory
-{
-    margin: 0 4px;
-    border-radius: 10px;
+#custom-notification {
+    color: @primary;
 }
 
-#custom-hw {
-    color: @fg;
-    font-size: 16px;
-    padding: 0;
-    margin: 0 6px 0 0;
+#pulseaudio {
+    padding: 0 6px;
+    margin: 0 3px;
+    color: @primary;
 }
 
-#pulseaudio.sink,
-#pulseaudio.source {
-    margin: 0;
-}
-
-#pulseaudio.source {
-    margin-right: 6px;
-}
-
-#pulseaudio.sink.muted
-{
-    color: @accent;
-}
-
-#pulseaudio.source.muted {
-    color: @accent;
-}
-
-#custom-notification  {
-    padding: 0 16px;
-}
-
-#tray {
-    margin: 0 6px;
-}
-
-#clock {
-    margin: 0;
-    font-style: italic;
+/* system */
+#custom-system {
+    font-size: 18px;
+    color: @primary;
+    padding: 0 12px 0 8px;
 }
