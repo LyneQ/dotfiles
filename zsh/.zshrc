@@ -72,7 +72,7 @@ export XDG_OPEN_PREFER_NONPORTAL=1
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
+export PATH="$PATH:/home/lynhe/.cargo/bin"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/lynhe/.lmstudio/bin"
 # End of LM Studio CLI section
