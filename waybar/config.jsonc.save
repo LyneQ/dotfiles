@@ -1,0 +1,203 @@
+{
+  "position": "top",
+  "margin": "4 4 0",
+//  "margin": "0",
+  "mod": "dock",
+  "modules-left": [
+    "custom/system",
+    "hyprland/workspaces",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "group/hardware",
+    "pulseaudio#input",
+    "pulseaudio#output",
+    "clock",
+    "custom/notification"
+  ],
+  // System modules
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5
+  },
+  "custom/system": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click": "wlogout -b 6x",
+    "on-click-right": "walker",
+    "return-type": "json",
+    "exec": "echo '{\"class\": \"arch\"}'",
+    "interval": "once"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " "
+  },
+  "memory": {
+    "interval": 30,
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}GB"
+  },
+  "custom/gpu": {
+    "format": "󰾲 ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/gpu.sh",
+    "interval": 2,
+    "tooltip": true
+  },
+  "battery": {
+    "bat": "BAT2",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "custom/hardware": {
+    "format": "󰋼"
+  },
+  "network": {
+    "interface": "enp8s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "󰊗 ",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) \nIP: {ipaddr}/{cidr}",
+    "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}/{cidr}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 2
+  },
+  // Hyprland
+  "hyprland/workspaces": {
+    "format": "{icon}{name}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "󰈹 ",
+      "2": " ",
+      "3": "󰘦 ",
+      "special": "",
+      "urgent": "",
+      "default": " "
+    },
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2
+      ]
+    },
+    "sort-by-number": true
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+  },
+
+  // Audio
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{status_icon} <i>{title}</i>",
+    "player-icons": {
+      "default": "▶",
+      "brave": "",
+      "firefox": "",
+      "zen-browser": "",
+      "spotify": "",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": ""
+    }
+  },
+  "pulseaudio#input": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "<span color=\"#ff0000\">󰍭 {volume}%</span>",
+    "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "pwvucontrol",
+    "on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%+",
+    "on-scroll-down": "wpctl set-volume -l 1.3 @DEFAULT_SOURCE@ 5%-",
+    "scroll-step": 5
+  },
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "format-muted": "<span color=\"#ff0000\">󰖁 {volume}%</span>",
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pwvucontrol",
+    "on-scroll-up": "wpctl set-volume -l 1.3 @DEFAULT_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "default": [
+        "",
+        ""
+      ]
+    }
+  },
+
+  // DateTime
+  "clock": {
+    "format": "{:%R %m/%d}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "format": {
+        "months": "<span color='#f50a1c'><b>{}</b></span>",
+        "days": "<span color='white'><b>{}</b></span>",
+        "weekdays": "<span color='white'><b>{}</b></span>",
+        "today": "<span color='#f50a1c'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+
+  // Notification
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "󰪑<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "󰪑<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  // Groups
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/hardware",
+      "network",
+      "battery",
+      "custom/gpu",
+      "memory",
+      "cpu"
+    ]
+  }
+}
