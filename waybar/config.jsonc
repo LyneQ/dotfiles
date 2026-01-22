@@ -27,7 +27,7 @@
   "custom/system": {
     "format": "󰣇",
     "tooltip": false,
-    "on-click": "wlogout -b 4",
+    "on-click": "wlogout -b 6",
     "on-click-right": "walker",
     "return-type": "json",
     "exec": "echo '{\"class\": \"arch\"}'",

@@ -76,5 +76,8 @@ export PATH="$PATH:/home/lynhe/.cargo/bin"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/lynhe/.lmstudio/bin"
 # End of LM Studio CLI section
-
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/home/lynhe/.spicetify
+
+alias claude="/home/lynhe/.claude/local/claude"
