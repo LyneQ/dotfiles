@@ -70,15 +70,16 @@ export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export XDG_OPEN_PREFER_NONPORTAL=1
 
+# bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# bun end
+
+# java
 export PATH="$PATH:/home/lynhe/.cargo/bin"
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/lynhe/.lmstudio/bin"
-# End of LM Studio CLI section
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:/home/lynhe/.spicetify
+# java end
 
 # pnpm
 export PNPM_HOME="/home/lynhe/.local/share/pnpm"
