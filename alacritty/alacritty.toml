@@ -1,7 +1,7 @@
 [general]
 import = [
-#    "~/.config/alacritty/catpputcin-mocha.toml"
     "~/.config/alacritty/lynhe.toml"
+    #"~/.config/alacritty/themes/noctalia.toml",
 ]
 
 # URL handling
