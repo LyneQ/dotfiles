@@ -80,4 +80,10 @@ export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/home/lynhe/.spicetify
 
-alias claude="/home/lynhe/.claude/local/claude"
+# pnpm
+export PNPM_HOME="/home/lynhe/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
