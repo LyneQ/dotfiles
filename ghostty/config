@@ -1,0 +1,57 @@
+# ── Font ──────────────────────────────────────────────────────────────────────
+font-family            = JetBrainsMono Nerd Font
+font-family-bold       = JetBrainsMono Nerd Font
+font-family-italic     = JetBrainsMono Nerd Font
+font-family-bold-italic = JetBrainsMono Nerd Font
+font-style             = Regular
+font-style-bold        = Bold
+font-style-italic      = Italic
+font-style-bold-italic = Bold Italic
+font-size              = 10
+
+# ── Window ────────────────────────────────────────────────────────────────────
+window-padding-x  = 12
+window-padding-y  = 12
+window-decoration = false
+background-opacity = 1.0
+
+# ── Scrolling ─────────────────────────────────────────────────────────────────
+scrollback-limit       = 10000
+mouse-scroll-multiplier = 5
+
+# ── Cursor ────────────────────────────────────────────────────────────────────
+# cursor-style       = bar
+cursor-style-blink = false
+cursor-color       = #fcee09
+cursor-text        = #0d0d0d
+# Note: unfocused_hollow has no direct Ghostty equivalent
+
+# ── Bell ──────────────────────────────────────────────────────────────────────
+# Ghostty has no visual bell duration/color config — only: bell = none | system | visual
+# bell = none
+
+# ── Colors ────────────────────────────────────────────────────────────────────
+background           = #0d0d0d
+foreground           = #e5e5e5
+selection-foreground = #ff4179
+selection-background = #280015
+
+# Normal (0–7)
+palette = 0=#000000
+palette = 1=#ff005f
+palette = 2=#00ff9f
+palette = 3=#fcee09
+palette = 4=#00ffe7
+palette = 5=#ff00d4
+palette = 6=#00d3ff
+palette = 7=#e5e5e5
+
+# Bright (8–15)
+palette = 8=#7f7f7f
+palette = 9=#ff2040
+palette = 10=#00ffaa
+palette = 11=#fff75a
+palette = 12=#46f9ff
+palette = 13=#ff67f5
+palette = 14=#7de5ff
+palette = 15=#ffffff

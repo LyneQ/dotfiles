@@ -320,6 +320,12 @@
       "namePrefix": ""
     },
     {
+      "type": "command",
+      "key": "│ └󰖟 Public IP",
+      "text": "curl -s https://api.ipify.org",
+      "keyColor": "cyan"
+    },
+    {
       "type": "custom",
       "format": "└────────────────────────────────────────────────────┘"
     },
