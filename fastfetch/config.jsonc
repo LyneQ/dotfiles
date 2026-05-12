@@ -1,34 +1,19 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "auto",
-    "source": "",
-    "color": {
-      "1": "cyan",
-      "2": "blue",
-      "3": "magenta",
-      "4": "white",
-      "5": "green",
-      "6": "yellow",
-      "7": "red",
-      "8": "black",
-      "9": "default"
-    },
-    "width": null,
-    "height": null,
-    "padding": {
-      "top": 2,
-      "left": 0,
-      "right": 4
-    },
-    "printRemaining": true,
-    "preserveAspectRatio": false,
-    "recache": false,
-    "position": "left",
-    "chafa": {
-      "fgOnly": false,
-      "symbols": "block+border+space-wide-inverted"
-    }
+  "type": "kitty-direct",
+  "source": "/home/lynhe/dotfiles/fastfetch/logo.png",
+  "width": 30,
+  "height": 15,
+  "preserveAspectRatio": true,
+  "padding": {
+    "top": 8,
+    "left": 4,
+    "right": 4
+  },
+  "printRemaining": true,
+  "recache": false,
+  "position": "left"
   },
   "display": {
     "stat": false,
@@ -129,9 +114,10 @@
         "host": "green"
       }
     },
+    { "type": "break" },
     {
       "type": "custom",
-      "format": "┌────────────────────── System ──────────────────────┐"
+      "format": "▸▸ SYSCORE ◂◂──────────────────────────────────"
     },
     {
       "type": "os",
@@ -140,22 +126,22 @@
     },
     {
       "type": "host",
-      "key": "│ ├󰌢 Host",
+      "key": "  ├󰌢 Host",
       "keyColor": "yellow"
     },
     {
       "type": "kernel",
-      "key": "│ ├ Kernel",
+      "key": "  ├ Kernel",
       "keyColor": "yellow"
     },
     {
       "type": "uptime",
-      "key": "│ ├ Uptime",
+      "key": "  ├ Uptime",
       "keyColor": "yellow"
     },
     {
       "type": "packages",
-      "key": "│ ├󰏖 Packages",
+      "key": "  ├󰏖 Packages",
       "keyColor": "yellow",
       "disabled": [
         "apk",
@@ -165,16 +151,13 @@
     },
     {
       "type": "shell",
-      "key": "│ └ Shell",
+      "key": "  └ Shell",
       "keyColor": "yellow"
     },
+    { "type": "break" },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────┘"
-    },
-    {
-      "type": "custom",
-      "format": "┌────────────────────── Desktop ─────────────────────┐"
+      "format": "▸▸ INTERFACE ◂◂─────────────────────────────────"
     },
     {
       "type": "wm",
@@ -184,37 +167,34 @@
     },
     {
       "type": "wmtheme",
-      "key": "│ ├󰓸 WM Theme",
+      "key": "  ├󰓸 WM Theme",
       "keyColor": "blue"
     },
     {
       "type": "theme",
-      "key": "│ ├󰉼 Theme",
+      "key": "  ├󰉼 Theme",
       "keyColor": "blue"
     },
     {
       "type": "icons",
-      "key": "│ ├ Icons",
+      "key": "  ├ Icons",
       "keyColor": "blue"
     },
     {
       "type": "display",
-      "key": "│ ├󰍹 Display",
+      "key": "  ├󰍹 Display",
       "keyColor": "blue",
       "preciseRefreshRate": false
     },
     {
       "type": "terminal",
-      "key": "│ └ Terminal",
+      "key": "  └ Terminal",
       "keyColor": "blue"
     },
+    { "type": "break" },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────┘"
-    },
-    {
-      "type": "custom",
-      "format": "┌────────────────────── Hardware ────────────────────┐"
+      "format": "▸▸ CYBERWARE ◂◂─────────────────────────────────"
     },
     {
       "type": "cpu",
@@ -225,7 +205,7 @@
     },
     {
       "type": "gpu",
-      "key": "│ ├󰾲 GPU",
+      "key": "  ├󰾲 GPU",
       "keyColor": "green",
       "driverSpecific": false,
       "detectionMethod": "pci",
@@ -239,7 +219,7 @@
     },
     {
       "type": "memory",
-      "key": "│ ├ Memory",
+      "key": "  ├ Memory",
       "keyColor": "green",
       "percent": {
         "green": 50,
@@ -249,7 +229,7 @@
     },
     {
       "type": "battery",
-      "key": "│ ├ Battery",
+      "key": "  ├ Battery",
       "keyColor": "green",
       "temp": false,
       "percent": {
@@ -260,12 +240,12 @@
     },
     {
       "type": "poweradapter",
-      "key": "│ ├󰚥 Power Adapter",
+      "key": "  ├󰚥 Power Adapter",
       "keyColor": "green"
     },
     {
       "type": "disk",
-      "key": "│ ├ Disk",
+      "key": "  ├ Disk",
       "keyColor": "green",
       "showRegular": true,
       "showExternal": true,
@@ -285,7 +265,7 @@
     },
     {
       "type": "swap",
-      "key": "│ └󰓡 Swap",
+      "key": "  └󰓡 Swap",
       "keyColor": "green",
       "percent": {
         "green": 50,
@@ -294,13 +274,10 @@
       },
       "separate": false
     },
+    { "type": "break" },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────┘"
-    },
-    {
-      "type": "custom",
-      "format": "┌────────────────────── Network ─────────────────────┐"
+      "format": "▸▸ NETLINK ◂◂───────────────────────────────────"
     },
     {
       "type": "localip",
@@ -321,14 +298,11 @@
     },
     {
       "type": "command",
-      "key": "│ └󰖟 Public IP",
+      "key": "  └󰖟 Public IP",
       "text": "curl -s https://api.ipify.org",
       "keyColor": "cyan"
     },
-    {
-      "type": "custom",
-      "format": "└────────────────────────────────────────────────────┘"
-    },
+    { "type": "break" },
     {
       "type": "colors",
       "key": " ",
