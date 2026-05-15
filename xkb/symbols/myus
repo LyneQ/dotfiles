@@ -1,0 +1,5 @@
+default partial alphanumeric_keys
+xkb_symbols "intl_notilde" {
+    include "us(intl)"
+    key <TLDE> { [ dead_grave, asciitilde ] };
+};
