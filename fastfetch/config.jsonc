@@ -156,9 +156,9 @@
     },
     {
       "type": "command",
-      "key":  "  └󰃫 Birthdate",
+      "key":  "  └󰃫 Age",
       "keyColor": "yellow",
-      "text": "/home/lynhe/.config/fastfetch/born.sh"
+      "text": "~/.config/fastfetch/born.sh"
     },
     { "type": "break" },
     {
