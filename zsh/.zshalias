@@ -5,5 +5,9 @@ alias cls="clear"
 alias c="clear"
 alias ls="lsd -lah"
 alias home="cd ~"
-alias fastfetch="hyfetch"
 alias s="sudo"
+
+
+alias vault-open='gocryptfs ~/.local/share/.private/store ~/.local/share/.private/open && cd ~/.local/share/.private/open'
+alias vault-close='cd ~ && fusermount -u ~/.local/share/.private/open && echo "Vault closed."'
+alias vault='cd ~/.local/share/.private/open'
