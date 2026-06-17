@@ -5,39 +5,31 @@
 ---@module 'hl'
 
 local primary = "rgb(ffffff)"
-
 local surface = "rgb(131313)"
-
 local secondary = "rgb(c6c6c6)"
-
 local error = "rgb(ffb4ab)"
-
-local tertiary = "rgb(e2e2e2)"
-
-local surface_lowest = "rgb(0e0e0e)"
 
 hl.config({
     general = {
         col = {
-            active_border = "rgb(ffffff)",
-            inactive_border = "rgb(131313)",
+            active_border = primary,
+            inactive_border = surface,
         },
     },
-})
-
-hl.config({
     group = {
         groupbar = {
-            col.active = "rgb(c6c6c6)",
-            col.inactive = "rgb(131313)",
-            col.locked_active = "rgb(ffb4ab)",
-            col.locked_inactive = "rgb(131313)",
+            col = {
+                active = secondary,
+                inactive = surface,
+                locked_active = error,
+                locked_inactive = surface,
+            },
         },
         col = {
-            border_active = "rgb(c6c6c6)",
-            border_inactive = "rgb(131313)",
-            border_locked_active = "rgb(ffb4ab)",
-            border_locked_inactive = "rgb(131313)",
+            border_active = secondary,
+            border_inactive = surface,
+            border_locked_active = error,
+            border_locked_inactive = surface,
         },
     },
 })
