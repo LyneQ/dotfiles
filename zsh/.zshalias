@@ -11,3 +11,6 @@ alias s="sudo"
 alias vault-open='gocryptfs ~/.local/share/.private/store ~/.local/share/.private/open && cd ~/.local/share/.private/open'
 alias vault-close='cd ~ && fusermount -u ~/.local/share/.private/open && echo "Vault closed."'
 alias vault='cd ~/.local/share/.private/open'
+
+alias start-p2p-session='sh ~/Scripts/proton-portForwarding.sh'
+alias vpnport='natpmpc -a 1 0 udp 60 -g 10.2.0.1 | grep -oP "Mapped public port \K[0-9]+"'
