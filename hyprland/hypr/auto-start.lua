@@ -14,6 +14,9 @@ hl.on("hyprland.start", function()
     hl.dispatch(hl.dsp.exec_cmd("uwsm app -- qs -c noctalia-shell --no-duplicate"))
     hl.dispatch(hl.dsp.exec_cmd('uwsm app -- hyprctl plugin load "' .. pluginDir .. '/lib/libhyprexpo.so"'))
     hl.dispatch(hl.dsp.exec_cmd("uwsm app -- hyprpm reload"))
-    hl.dispatch(hl.dsp.exec_cmd("uwsm app -- /usr/bin/protonvpn-app"))
+    -- Start VPN with P2P active and in the fastest country 
+    hl.dispatch(hl.dsp.exec_cmd("uwsm app -- protonvpn connect --p2p"))
+    -- Auto start app with specific desktop layout
     hl.dispatch(hl.dsp.exec_cmd("uwsm app -- discord"))
+    hl.dispatch(hl.dsp.exec_cmd("uwsm app -- steam"))
 end)

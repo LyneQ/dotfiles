@@ -24,3 +24,9 @@ hl.workspace_rule({
   monitor   = "DP-2",
   default   = true
 })
+
+hl.workspace_rule({
+  workspace = "3",
+  monitor   = "DP-1",
+  default   = true
+})

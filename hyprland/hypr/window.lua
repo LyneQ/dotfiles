@@ -82,3 +82,10 @@ hl.window_rule({
   match     = { class = "^(discord)$" },
   workspace = "2 silent"
 })
+
+-- set steam to workspace 3 when opened
+hl.window_rule({
+  name      = "steam-workspace",
+  match     = { class = "^(steam)$" },
+  workspace = "3 silent"
+})

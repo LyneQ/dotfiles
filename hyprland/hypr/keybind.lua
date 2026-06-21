@@ -3,45 +3,36 @@
 -- Converted from hyprlang to Lua (Hyprland >= 0.55)
 -- =============================================================
 -- Voir : https://wiki.hypr.land/Configuring/Basics/Binds/
---
--- Flags hyprlang → options Lua :
---   bind  → hl.bind(...)                         (défaut)
---   binde → hl.bind(..., { repeating = true })
---   bindl → hl.bind(..., { locked = true })
---   bindel→ hl.bind(..., { locked = true, repeating = true })
---   bindm → hl.bind(..., { mouse = true })
---
--- Variables (globales, définies dans hyprland.lua) :
---   terminal, fileManager, menu, browser, notepad
 
 local mainMod = "SUPER"
 
 -- ############################
--- ### 1. BINDS DE BASE ###
+-- ### 1. BINDS DE BASE     ###
 -- ############################
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))                  -- Ouvrir terminal
-hl.bind(mainMod .. " + Q",      hl.dsp.window.close())                      -- Fermer la fenêtre active
-hl.bind(mainMod .. " + M",      hl.dsp.exit())                              -- Quitter Hyprland
-hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))               -- Ouvrir le gestionnaire de fichiers
-hl.bind(mainMod .. " + B",      hl.dsp.exec_cmd(browser))                   -- Ouvrir le navigateur
-hl.bind(mainMod .. " + V",      hl.dsp.window.float({ action = "toggle" })) -- Toggle floating
-hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd(menu))                      -- Ouvrir le menu
-hl.bind(mainMod .. " + P",      hl.dsp.window.pseudo())                     -- Dwindle pseudo
-hl.bind(mainMod .. " + J",      hl.dsp.layout("togglesplit"))               -- Toggle split
-hl.bind(mainMod .. " + N",      hl.dsp.exec_cmd(notepad))                   -- Ouvrir notepad
+hl.bind(mainMod .. " + Q",      hl.dsp.window.close())                            -- Fermer la fenêtre active
+hl.bind(mainMod .. " + M",      hl.dsp.exit())                                    -- Quitter Hyprland
+hl.bind(mainMod .. " + V",      hl.dsp.window.float({ action = "toggle" }))       -- Toggle floating
+hl.bind(mainMod .. " + P",      hl.dsp.window.pseudo())                           -- Dwindle pseudo
+hl.bind(mainMod .. " + J",      hl.dsp.layout("togglesplit"))                     -- Toggle split
+hl.bind(mainMod .. " + F",      hl.dsp.window.fullscreen("maximized", "toggle"))  -- Toggle fullscreen
 
--- MIGRATION_NOTE : fullscreenstate avec argument 3 (fullscreen interne + client).
--- Vérifie la syntaxe exacte sur le wiki Dispatchers si le comportement diffère.
-hl.bind(mainMod .. " + F",      hl.dsp.window.fullscreen("maximized", "toggle")) -- Toggle fullscreen
+-- ############################
+-- ### 1. PROGRAMME DIRECT  ###
+-- ############################
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))                        -- Ouvrir terminal
+hl.bind(mainMod .. " + B",      hl.dsp.exec_cmd(browser))                         -- Ouvrir le navigateur
+hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))                     -- Ouvrir le gestionnaire de fichiers
+hl.bind(mainMod .. " + N",      hl.dsp.exec_cmd(notepad))                         -- Ouvrir notepad
+hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd(menu))                            -- Ouvrir le menu
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(emojiMenu))                       -- Ouvrir le panneau de selection des emoji
+hl.bind(mainMod .. " + C",      hl.dsp.exec_cmd(clipboardMenu))                   -- ouvrir l'historique du presse-papier
 
 -- ############################
 -- ### 2. UTILITAIRES ###
 -- ############################
-hl.bind(mainMod .. " + F1",     hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))
+hl.bind(mainMod .. " + F1",     hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))       -- Selection le layout de clavier suivant
 hl.bind(mainMod .. " + F12",    hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))    -- Screenshot zone
-hl.bind(mainMod .. " + C",      hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/script/clipboard.sh"))
 hl.bind(mainMod .. " + F11",    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_SOURCE@ toggle")) -- Toggle micro
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/script/emoji-picker.sh"))
 
 -- ############################
 -- ### 3. FOCUS FENÊTRE ###
