@@ -69,11 +69,6 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })   -- Déplacer fenêtre
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })   -- Redimensionner fenêtre
 
---hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x =  30, y = 0 }),  { repeating = true })
---hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.resize({ x = -30, y = 0 }),  { repeating = true })
---hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.resize({ x = 0,   y = -30 }), { repeating = true })
---hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.resize({ x = 0,   y =  30 }), { repeating = true })
-
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 30,  y = 0,  relative = true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.resize({ x = -30, y = 0,  relative = true }), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.resize({ x = 0,   y = -30, relative = true }), { repeating = true })
