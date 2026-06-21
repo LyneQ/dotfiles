@@ -2,7 +2,6 @@
 -- auto-start.lua — Démarrage automatique
 -- Converted from hyprlang to Lua (Hyprland >= 0.55)
 -- =============================================================
--- exec-once = cmd  →  lancé dans hl.on("hyprland.start", ...)
 
 local pluginDir = os.getenv("HYPR_PLUGIN_DIR") or ""
 
