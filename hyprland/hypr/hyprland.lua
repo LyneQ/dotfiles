@@ -6,14 +6,21 @@
 -- ###################
 -- ### MY PROGRAMS ###
 -- ###################
--- These are global so sub-configs (keybind.lua, etc.) can use them.
+
+-- Apps
 terminal        = "ghostty"
 fileManager     = "dolphin"
+browser         = "helium-browser"
+notepad         = "leafpad"
+-- Menu
 menu            = "qs -c noctalia-shell ipc call launcher toggle"
 emojiMenu       = "qs -c noctalia-shell ipc call launcher emoji"
 clipboardMenu   = "qs -c noctalia-shell ipc call plugin:clipboard toggle"
-browser         = "helium-browser"
-notepad         = "leafpad"
+-- Command
+colorPickerCmd  = "hyprpicker --autocopy --notify --scale=8"
+screenShotCmd   = "hyprshot -m region --clipboard-only --freeze"
+muteCmd         = "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+
 
 -- #####################
 -- ### IMPORT CONFIG ###
